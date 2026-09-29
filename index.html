@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Career Test</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      user-select: none;
+    }
+    .container {
+      background: #1e1e1e;
+      padding: 40px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      text-align: center;
+    }
+    h1 {
+      color: #ff9800;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    .question-text {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      min-height: 80px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      margin: 15px 0;
+      font-size: 1.5rem;
+      background: #2c2c2c;
+      color: #ffffff;
+      border: 2px solid #333;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: left;
+    }
+    .btn:hover {
+      background: #3d3d3d;
+      border-color: #ff9800;
+    }
+    .btn:active {
+      background: #ff9800;
+      color: #000;
+      transform: scale(0.98);
+    }
+    .hidden { display: none; }
+    .result-title {
+      font-size: 3rem;
+      color: #f44336;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .result-desc {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: #b0bec5;
+      margin-bottom: 40px;
+    }
+    .restart-btn {
+      background: #ff9800;
+      color: #121212;
+      border: none;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="quiz-container">
+  <!-- Блок с вопросами -->
+  <div id="question-block">
+    <h1 id="q-number">Question 1</h1>
+    <div class="question-text" id="q-text">Loading...</div>
+    <div id="answers-box"></div>
+  </div>
+
+  <!-- Блок с результатами -->
+  <div id="result-block" class="hidden">
+    <h1>Your True Calling:</h1>
+    <div class="result-title" id="r-title">Job Title</div>
+    <div class="result-desc" id="r-desc">Job Description</div>
+    <button class="btn restart-btn" onclick="startQuiz()">Take Test Again</button>
+  </div>
+</div>
+
+<script>
+// ==========================================
+// 1. НАСТРОЙКА ПРОФЕССИЙ
+// Здесь ключи (sewage, water_courier и т.д.) используются для подсчета баллов.
+// ==========================================
+const professions = {
+  a1: {
+    title: "A1",
+    desc: "You navigate the rivers of life. Literally. You deal with other people's problems every single day."
+  },
+  a2: {
+    title: "A2",
+    desc: "Your spine is made of titanium, but your knees are crying. You bring hydration to the lazy ones."
+  },
+  b1: {
+    title: "B1",
+    desc: "Dodging traffic in a snowstorm while carrying 15 pizzas. You are fueled purely by adrenaline and energy drinks."
+  },
+  b2: {
+    title: "B2",
+    desc: "You listen to endless curses about bad internet connection. Your patience is unlimited, your soul is empty."
+  },
+  c1: {
+    title: "C1",
+    desc: "You sit in the dark compiling custom kernels on a 10-year-old laptop just to make the Wi-Fi work."
+  },
+  c2: {
+    title: "C2",
+    desc: "You've been rewriting your multiplayer game architecture for 3 years. Nobody has ever played it."
+  },
+  d1: {
+    title: "D1",
+    desc: "You build incredibly complex automated storage systems, but in real life, you can't fix a leaky faucet."
+  },
+  d2: {
+    title: "D2",
+    desc: "You break things for a living. Mostly your own mental health when developers ignore your bug reports."
+  }
+};
+
+// ==========================================
+// 2. НАСТРОЙКА ВОПРОСОВ И БАЛЛОВ
+// В impacts пишем, какой профессии и сколько баллов дает этот ответ
+// ==========================================
+const questions = [
+  {
+    text: "It's Friday night and everything goes wrong. What is your reaction?",
+    answers: [
+      { 
+        text: "Dive right into the mess and physically move things around until it's done.", 
+        impacts: { sewage: 3, water_courier: 2, bike_courier: 1 } 
+      },
+      { 
+        text: "Apologize politely to angry people while dying inside.", 
+        impacts: { call_center: 3, qa_tester: 1 } 
+      },
+      { 
+        text: "Open a terminal and start writing a script to automate the fix.", 
+        impacts: { linux_shaman: 3, redstone: 2 } 
+      },
+      { 
+        text: "Redesign the entire core mechanics from scratch.", 
+        impacts: { indie_dev: 3, redstone: 1 } 
+      }
+    ]
+  },
+  
+  {
+    text: "Your biggest enemy at work is...",
+    answers: [
+      { 
+        text: "Stairs. Elevators that don't work.", 
+        impacts: { water_courier: 3, bike_courier: 2 } 
+      },
+      { 
+        text: "Humans speaking to me.", 
+        impacts: { call_center: 3, qa_tester: 2 } 
+      },
+      { 
+        text: "A memory leak or an unexplainable crash.", 
+        impacts: { indie_dev: 3, linux_shaman: 2 } 
+      },
+      { 
+        text: "The smell. Just the smell.", 
+        impacts: { sewage: 3 } 
+      }
+    ]
+  }
+];
+
+// ==========================================
+// 3. ЛОГИКА ТЕСТА (Тут ничего менять не нужно)
+// ==========================================
+let currentStep = 0;
+let scores = {};
+
+function startQuiz() {
+  currentStep = 0;
+  // Сбрасываем очки для всех профессий
+  scores = {};
+  for (let key in professions) {
+    scores[key] = 0;
+  }
+  
+  document.getElementById('result-block').classList.add('hidden');
+  document.getElementById('question-block').classList.remove('hidden');
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = questions[currentStep];
+  document.getElementById('q-number').innerText = `Question ${currentStep + 1} of ${questions.length}`;
+  document.getElementById('q-text').innerText = q.text;
+  
+  const box = document.getElementById('answers-box');
+  box.innerHTML = ''; // Очищаем старые кнопки
+  
+  q.answers.forEach(answer => {
+    const btn = document.createElement('button');
+    btn.className = 'btn';
+    btn.innerText = answer.text;
+    btn.onclick = () => handleAnswer(answer.impacts);
+    box.appendChild(btn);
+  });
+}
+
+function handleAnswer(impacts) {
+  // Добавляем баллы за выбранный ответ
+  for (let jobKey in impacts) {
+    if (scores[jobKey] !== undefined) {
+      scores[jobKey] += impacts[jobKey];
+    }
+  }
+  
+  currentStep++;
+  if (currentStep < questions.length) {
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById('question-block').classList.add('hidden');
+  document.getElementById('result-block').classList.remove('hidden');
+  
+  // Ищем профессию с максимальным количеством очков
+  let maxScore = -1;
+  let winnerKey = 'sewage'; // По умолчанию
+  
+  for (let key in scores) {
+    if (scores[key] > maxScore) {
+      maxScore = scores[key];
+      winnerKey = key;
+    }
+  }
+  
+  const winner = professions[winnerKey];
+  document.getElementById('r-title').innerText = winner.title;
+  document.getElementById('r-desc').innerText = winner.desc;
+}
+
+// Запускаем тест при загрузке страницы
+startQuiz();
+</script>
+
+</body>
+</html>
