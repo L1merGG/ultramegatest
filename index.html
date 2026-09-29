@@ -107,35 +107,35 @@
 const professions = {
   a1: {
     title: "A1",
-    desc: "You navigate the rivers of life. Literally. You deal with other people's problems every single day."
+    desc: ""
   },
   a2: {
     title: "A2",
-    desc: "Your spine is made of titanium, but your knees are crying. You bring hydration to the lazy ones."
+    desc: ""
   },
   b1: {
     title: "B1",
-    desc: "Dodging traffic in a snowstorm while carrying 15 pizzas. You are fueled purely by adrenaline and energy drinks."
+    desc: ""
   },
   b2: {
     title: "B2",
-    desc: "You listen to endless curses about bad internet connection. Your patience is unlimited, your soul is empty."
+    desc: ""
   },
   c1: {
     title: "C1",
-    desc: "You sit in the dark compiling custom kernels on a 10-year-old laptop just to make the Wi-Fi work."
+    desc: ""
   },
   c2: {
     title: "C2",
-    desc: "You've been rewriting your multiplayer game architecture for 3 years. Nobody has ever played it."
+    desc: ""
   },
   d1: {
     title: "D1",
-    desc: "You build incredibly complex automated storage systems, but in real life, you can't fix a leaky faucet."
+    desc: ""
   },
   d2: {
     title: "D2",
-    desc: "You break things for a living. Mostly your own mental health when developers ignore your bug reports."
+    desc: ""
   }
 };
 
@@ -145,51 +145,88 @@ const professions = {
 // ==========================================
 const questions = [
   {
-    text: "It's Friday night and everything goes wrong. What is your reaction?",
+    text: "Question N.1",
     answers: [
-      { 
-        text: "Dive right into the mess and physically move things around until it's done.", 
-        impacts: { sewage: 3, water_courier: 2, bike_courier: 1 } 
-      },
-      { 
-        text: "Apologize politely to angry people while dying inside.", 
-        impacts: { call_center: 3, qa_tester: 1 } 
-      },
-      { 
-        text: "Open a terminal and start writing a script to automate the fix.", 
-        impacts: { linux_shaman: 3, redstone: 2 } 
-      },
-      { 
-        text: "Redesign the entire core mechanics from scratch.", 
-        impacts: { indie_dev: 3, redstone: 1 } 
-      }
+      { text: "A) ...", impacts: { a1: 3, c1: 1 } },
+      { text: "B) ...", impacts: { a2: 3, b2: 1 } },
+      { text: "C) ...", impacts: { b2: 3, c1: 1 } },
+      { text: "D) ...", impacts: { b1: 3, d1: 1 } }
     ]
   },
-  
   {
-    text: "Your biggest enemy at work is...",
+    text: "Question N.2",
     answers: [
-      { 
-        text: "Stairs. Elevators that don't work.", 
-        impacts: { water_courier: 3, bike_courier: 2 } 
-      },
-      { 
-        text: "Humans speaking to me.", 
-        impacts: { call_center: 3, qa_tester: 2 } 
-      },
-      { 
-        text: "A memory leak or an unexplainable crash.", 
-        impacts: { indie_dev: 3, linux_shaman: 2 } 
-      },
-      { 
-        text: "The smell. Just the smell.", 
-        impacts: { sewage: 3 } 
-      }
+      { text: "A) ...", impacts: { a1: 3, a2: 3 } },
+      { text: "B) ...", impacts: { d2: 3, b1: 1 } },
+      { text: "C) ...", impacts: { b1: 3, d1: 2 } },
+      { text: "D) ...", impacts: { d1: 3, c2: 2 } }
+    ]
+  },
+  {
+    text: "Question N.3",
+    answers: [
+      { text: "A) ...", impacts: { b1: 3, d1: 2 } },
+      { text: "B) ...", impacts: { c2: 3, d1: 1 } },
+      { text: "C) ...", impacts: { c1: 3, a1: 2 } },
+      { text: "D) ...", impacts: { a2: 2, d2: 3 } }
+    ]
+  },
+  {
+    text: "Question N.4",
+    answers: [
+      { text: "A) ...", impacts: { c1: 2, d2: 3 } },
+      { text: "B) ...", impacts: { c2: 3, a1: 1 } },
+      { text: "C) ...", impacts: { b1: 3, b2: 1 } },
+      { text: "D) ...", impacts: { a2: 3, b2: 2 } }
+    ]
+  },
+  {
+    text: "Question N.5",
+    answers: [
+      { text: "A) ...", impacts: { a1: 2, c1: 2 } },
+      { text: "B) ...", impacts: { a2: 2, d2: 2 } },
+      { text: "C) ...", impacts: { b2: 3, c2: 2 } },
+      { text: "D) ...", impacts: { d1: 3, b1: 1 } }
+    ]
+  },
+  {
+    text: "Question N.6",
+    answers: [
+      { text: "A) ...", impacts: { a1: 3, a2: 2 } },
+      { text: "B) ...", impacts: { d2: 3, c1: 1 } },
+      { text: "C) ...", impacts: { c2: 2, b2: 2 } },
+      { text: "D) ...", impacts: { b1: 3, d1: 1 } }
+    ]
+  },
+  {
+    text: "Question N.7",
+    answers: [
+      { text: "A) ...", impacts: { b2: 3, a2: 2 } },
+      { text: "B) ...", impacts: { c1: 2, c2: 2 } },
+      { text: "C) ...", impacts: { d2: 3, a1: 1 } },
+      { text: "D) ...", impacts: { d1: 3, b1: 2 } }
+    ]
+  },
+  {
+    text: "Question N.8",
+    answers: [
+      { text: "A) ...", impacts: { a1: 3, a2: 2 } },
+      { text: "B) ...", impacts: { b2: 3, c2: 1 } },
+      { text: "C) ...", impacts: { c1: 3, d2: 2 } },
+      { text: "D) ...", impacts: { d1: 3, b1: 3 } }
+    ]
+  },
+  {
+    text: "Question N.9",
+    answers: [
+      { text: "A) ...", impacts: { a2: 2, c1: 2 } },
+      { text: "B) ...", impacts: { b1: 3, d1: 2 } },
+      { text: "C) ...", impacts: { b2: 3, c2: 2 } },
+      { text: "D) ...", impacts: { d2: 3, a1: 2 } }
     ]
   }
 ];
-
-// ==========================================
+//==========================================
 // 3. ЛОГИКА ТЕСТА (Тут ничего менять не нужно)
 // ==========================================
 let currentStep = 0;
@@ -247,7 +284,7 @@ function showResult() {
   
   // Ищем профессию с максимальным количеством очков
   let maxScore = -1;
-  let winnerKey = 'sewage'; // По умолчанию
+  let winnerKey = 'd2'; // По умолчанию
   
   for (let key in scores) {
     if (scores[key] > maxScore) {
