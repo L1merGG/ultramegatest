@@ -1,306 +1,1006 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ultimate Career Test</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #e0e0e0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      user-select: none;
-    }
-    .container {
-      background: #1e1e1e;
-      padding: 40px;
-      border-radius: 16px;
-      width: 90%;
-      max-width: 900px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-      text-align: center;
-    }
-    h1 {
-      color: #ff9800;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-    .question-text {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      min-height: 80px;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 20px;
-      margin: 15px 0;
-      font-size: 1.5rem;
-      background: #2c2c2c;
-      color: #ffffff;
-      border: 2px solid #333;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: left;
-    }
-    .btn:hover {
-      background: #3d3d3d;
-      border-color: #ff9800;
-    }
-    .btn:active {
-      background: #ff9800;
-      color: #000;
-      transform: scale(0.98);
-    }
-    .hidden { display: none; }
-    .result-title {
-      font-size: 3rem;
-      color: #f44336;
-      font-weight: bold;
-      margin: 20px 0;
-    }
-    .result-desc {
-      font-size: 1.5rem;
-      line-height: 1.6;
-      color: #b0bec5;
-      margin-bottom: 40px;
-    }
-    .restart-btn {
-      background: #ff9800;
-      color: #121212;
-      border: none;
-      font-weight: bold;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤪 УЛЬТРА-КРИНЖ ПУЛЬТ ОТВЕТОВ 3000 🤪</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ==========================================================================
+           БЕЗУМНЫЕ КИСЛОТНЫЕ СТИЛИ И АНИМАЦИИ 90-Х / Y2K (МАКСИМАЛЬНЫЙ КРИНЖ)
+           ========================================================================== */
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Press+Start+2P&family=Rubik+Beastly&display=swap');
+
+        :root {
+            --acid-green: #00ff00;
+            --acid-pink: #ff00ff;
+            --acid-yellow: #ffff00;
+            --acid-cyan: #00ffff;
+            --acid-orange: #ff5500;
+        }
+
+        * {
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: "Comic Sans MS", "Comic Neue", cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* Гипнотический радужный фон */
+            background: linear-gradient(
+                45deg,
+                #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000
+            );
+            background-size: 600% 600%;
+            animation: rainbowBg 6s linear infinite;
+            cursor: crosshair;
+        }
+
+        /* Дорожная сетка поверх радуги */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 0, 0.35) 2px, transparent 3px),
+                linear-gradient(to right, rgba(0, 255, 255, 0.25) 2px, transparent 2px),
+                linear-gradient(to bottom, rgba(255, 0, 255, 0.25) 2px, transparent 2px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+            animation: gridMove 3s linear infinite;
+        }
+
+        @keyframes rainbowBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+
+        /* Бегущая строка сверху и снизу */
+        .marquee-strip {
+            background: repeating-linear-gradient(
+                -45deg,
+                #ffff00,
+                #ffff00 18px,
+                #000000 18px,
+                #000000 36px
+            );
+            border-top: 4px ridge #ff00ff;
+            border-bottom: 4px ridge #00ffff;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            z-index: 20;
+            box-shadow: 0 0 20px #ff00ff;
+        }
+
+        .marquee-inner {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.85);
+            color: #00ff00;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0 #ff00ff, -2px -2px 0 #00ffff;
+            animation: scrollMarquee 14s linear infinite;
+        }
+
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* WordArt заголовок */
+        .wordart-title {
+            background: linear-gradient(180deg, #ffff00 0%, #ff8800 50%, #ff0055 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(3px 3px 0px #0000ff) drop-shadow(-3px -3px 0px #00ff00);
+            animation: wobbleTitle 1.6s ease-in-out infinite alternate;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        @keyframes wobbleTitle {
+            0% { transform: rotate(-1.5deg) scale(0.98); }
+            100% { transform: rotate(1.5deg) scale(1.03); }
+        }
+
+        /* Пульсирующая рамка для главного блока */
+        .ugly-container {
+            background: rgba(15, 0, 40, 0.88);
+            border: 8px outset #00ff00;
+            box-shadow: 
+                0 0 0 5px #ff00ff,
+                0 0 0 10px #ffff00,
+                0 0 35px 10px #00ffff,
+                inset 0 0 30px rgba(255, 0, 255, 0.6);
+            animation: borderDisco 1.2s steps(2) infinite;
+        }
+
+        @keyframes borderDisco {
+            0% {
+                border-color: #00ff00;
+                box-shadow: 0 0 0 5px #ff00ff, 0 0 0 10px #ffff00, 0 0 35px 10px #00ffff, inset 0 0 25px rgba(255,0,255,0.5);
+            }
+            50% {
+                border-color: #ffff00;
+                box-shadow: 0 0 0 5px #00ffff, 0 0 0 10px #ff0000, 0 0 35px 10px #00ff00, inset 0 0 25px rgba(0,255,255,0.5);
+            }
+        }
+
+        /* Стили для 4 кнопок ответов: УРОДЛИВЫЕ, НО КРУПНЫЕ, СТАБИЛЬНЫЕ И УДОБНЫЕ */
+        .ugly-answer-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+            border-width: 6px;
+            border-style: ridge;
+            text-shadow: 2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000;
+            cursor: pointer;
+        }
+
+        /* Бегущий блик внутри кнопки */
+        .ugly-answer-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 40%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(25deg);
+            animation: sheenSweep 2.6s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes sheenSweep {
+            0% { left: -60%; }
+            100% { left: 140%; }
+        }
+
+        .ugly-answer-btn:hover {
+            transform: scale(1.025);
+            filter: brightness(1.15) contrast(1.15);
+            z-index: 5;
+        }
+
+        .ugly-answer-btn:active {
+            transform: scale(0.97);
+        }
+
+        /* Индивидуальная кислотная раскраска каждой из 4 кнопок */
+        .btn-style-0 {
+            background: repeating-linear-gradient(135deg, #ff0066 0px, #ff0066 22px, #cc00ff 22px, #cc00ff 44px);
+            border-color: #ffff00;
+            box-shadow: 6px 6px 0px #00ffff, inset 0 0 15px #ffff00;
+        }
+        .btn-style-1 {
+            background: repeating-linear-gradient(135deg, #00cc00 0px, #00cc00 22px, #0099ff 22px, #0099ff 44px);
+            border-color: #ff00ff;
+            box-shadow: 6px 6px 0px #ffff00, inset 0 0 15px #00ffff;
+        }
+        .btn-style-2 {
+            background: repeating-linear-gradient(135deg, #ff6600 0px, #ff6600 22px, #ffcc00 22px, #ffcc00 44px);
+            border-color: #00ffff;
+            box-shadow: 6px 6px 0px #ff00ff, inset 0 0 15px #ff0000;
+        }
+        .btn-style-3 {
+            background: repeating-linear-gradient(135deg, #6600ff 0px, #6600ff 22px, #00cccc 22px, #00cccc 44px);
+            border-color: #00ff00;
+            box-shadow: 6px 6px 0px #ff6600, inset 0 0 15px #ff00ff;
+        }
+
+        /* Выбранная кнопка (без спойлера правильности!) */
+        .btn-selected-locked {
+            outline: 6px dashed #ffff00 !important;
+            outline-offset: 3px;
+            box-shadow: 0 0 30px #ffff00, 0 0 50px #00ffff, inset 0 0 25px #ffffff !important;
+            transform: scale(1.03);
+            filter: brightness(1.22);
+            z-index: 10;
+        }
+
+        /* Невыбранные кнопки при наличии выбора слегка приглушаются, но остаются кликабельными до перехода */
+        .btn-dimmed {
+            opacity: 0.65;
+            filter: grayscale(35%);
+        }
+
+        /* Вращающийся значок буквы A, B, C, D */
+        .letter-badge {
+            font-family: 'Press Start 2P', monospace, sans-serif;
+            background: #ffff00;
+            color: #000000;
+            border: 4px solid #000000;
+            box-shadow: 3px 3px 0 #ff00ff;
+            text-shadow: none;
+            animation: badgePulse 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes badgePulse {
+            0% { transform: rotate(-6deg) scale(0.95); background: #ffff00; }
+            100% { transform: rotate(6deg) scale(1.08); background: #00ffff; }
+        }
+
+        /* Летающие фоновые эмодзи */
+        .floating-emoji {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+            font-size: 2.4rem;
+            opacity: 0.7;
+            animation: floatAround 9s ease-in-out infinite alternate;
+            filter: drop-shadow(0 0 8px #ffff00);
+        }
+
+        @keyframes floatAround {
+            0% { transform: translateY(0px) rotate(0deg) scale(0.9); }
+            50% { transform: translateY(-35px) rotate(180deg) scale(1.25); }
+            100% { transform: translateY(25px) rotate(360deg) scale(0.95); }
+        }
+
+        /* Мигающий бейдж в стиле 90-х */
+        .blink-badge {
+            animation: hardBlink 0.7s steps(2) infinite;
+        }
+
+        @keyframes hardBlink {
+            0% { background-color: #ff0000; color: #ffff00; border-color: #ffff00; }
+            50% { background-color: #ffff00; color: #000000; border-color: #ff0000; }
+        }
+
+        /* Вращающиеся звезды */
+        .spin-fast {
+            display: inline-block;
+            animation: spin360 1.8s linear infinite;
+        }
+
+        @keyframes spin360 {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Кнопка подтверждения/перехода дальше */
+        .next-action-btn-active {
+            background: linear-gradient(90deg, #00ff00, #ffff00, #00ffff, #00ff00);
+            background-size: 300% 100%;
+            color: #000000;
+            border: 5px ridge #ffffff;
+            box-shadow: 0 0 25px #00ff00, 5px 5px 0 #ff00ff;
+            animation: rainbowBtn 1.5s linear infinite, pulseScale 0.6s ease-in-out infinite alternate;
+            cursor: pointer;
+        }
+
+        .next-action-btn-disabled {
+            background: repeating-linear-gradient(45deg, #333333, #333333 12px, #222222 12px, #222222 24px);
+            color: #888888;
+            border: 5px ridge #555555;
+            cursor: not-allowed;
+            opacity: 0.75;
+        }
+
+        @keyframes rainbowBtn {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        @keyframes pulseScale {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.04); }
+        }
+
+        /* Взрыв частиц при клике */
+        .click-particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 1.8rem;
+            animation: particleFly 0.85s ease-out forwards;
+        }
+
+        @keyframes particleFly {
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+            100% { transform: translate(var(--tx), var(--ty)) scale(0.2) rotate(var(--rot)); opacity: 0; }
+        }
+    </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col justify-between relative">
 
-<div class="container" id="quiz-container">
-  <!-- Блок с вопросами -->
-  <div id="question-block">
-    <h1 id="q-number">Question 1</h1>
-    <div class="question-text" id="q-text">Loading...</div>
-    <div id="answers-box"></div>
-  </div>
+    <!-- ЛЕТАЮЩИЕ ВСРАТЫЕ ЭМОДЗИ НА ФОНЕ -->
+    <div class="floating-emoji" style="top: 8%; left: 3%; animation-delay: 0s;">👽</div>
+    <div class="floating-emoji" style="top: 18%; right: 4%; animation-delay: -2s;">🐸</div>
+    <div class="floating-emoji" style="bottom: 14%; left: 5%; animation-delay: -4s;">🤡</div>
+    <div class="floating-emoji" style="bottom: 20%; right: 3%; animation-delay: -1s;">💥</div>
+    <div class="floating-emoji" style="top: 50%; left: 1.5%; animation-delay: -3s;">🦄</div>
+    <div class="floating-emoji" style="top: 46%; right: 1.5%; animation-delay: -5s;">🍕</div>
 
-  <!-- Блок с результатами -->
-  <div id="result-block" class="hidden">
-    <h1>Your True Calling:</h1>
-    <div class="result-title" id="r-title">Job Title</div>
-    <div class="result-desc" id="r-desc">Job Description</div>
-    <button class="btn restart-btn" onclick="startQuiz()">Take Test Again</button>
-  </div>
-</div>
+    <!-- ВЕРХНЯЯ БЕГУЩАЯ СТРОКА -->
+    <div class="marquee-strip">
+        <div class="marquee-inner text-xs sm:text-sm">
+            🚨 ВНИМАНИЕ! СМОТРИ ВОПРОС НА ЭКРАНЕ ВЕДУЩЕГО, А ЗДЕСЬ ЖМИ ОТВЕТ! 🚨 НЕЛЬЗЯ ПЕРЕЙТИ ДАЛЬШЕ БЕЗ ОТВЕТА! 🚨 РЕЗУЛЬТАТЫ И ПРАВИЛЬНЫЕ ОТВЕТЫ ТОЛЬКО В САМОМ КОНЦЕ! 🚨 ЖМИ A, B, C ИЛИ D! 🚨 ВНИМАНИЕ! СМОТРИ ВОПРОС НА ЭКРАНЕ ВЕДУЩЕГО, А ЗДЕСЬ ЖМИ ОТВЕТ! 🚨
+        </div>
+    </div>
 
-<script>
-// ==========================================
-// 1. НАСТРОЙКА ПРОФЕССИЙ
-// Здесь ключи (sewage, water_courier и т.д.) используются для подсчета баллов.
-// ==========================================
-const professions = {
-  a1: {
-    title: "A1",
-    desc: ""
-  },
-  a2: {
-    title: "A2",
-    desc: ""
-  },
-  b1: {
-    title: "B1",
-    desc: ""
-  },
-  b2: {
-    title: "B2",
-    desc: ""
-  },
-  c1: {
-    title: "C1",
-    desc: ""
-  },
-  c2: {
-    title: "C2",
-    desc: ""
-  },
-  d1: {
-    title: "D1",
-    desc: ""
-  },
-  d2: {
-    title: "D2",
-    desc: ""
-  }
-};
+    <!-- ГЛАВНЫЙ КОНТЕЙНЕР -->
+    <main class="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-5xl mx-auto px-3 sm:px-6 py-3 sm:py-5">
+        
+        <!-- ВЕРХНЯЯ ПАНЕЛЬ ИНФО И НАСТРОЕК ЗВУКА -->
+        <header class="w-full ugly-container rounded-3xl p-3 sm:p-4 mb-3 sm:mb-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+                
+                <!-- Заголовок -->
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl sm:text-4xl spin-fast">💿</span>
+                    <div>
+                        <h1 class="wordart-title text-xl sm:text-3xl md:text-4xl uppercase leading-none">
+                            ПУЛЬТ ОТВЕТОВ 3000
+                        </h1>
+                        <p class="text-[11px] sm:text-xs font-bold text-cyan-300 tracking-wider mt-1">
+                            ★ ТОЛЬКО ВАРИАНТЫ • СТРОГО ПО ОЧЕРЕДИ • ИТОГИ В ФИНАЛЕ ★
+                        </p>
+                    </div>
+                </div>
 
-// ==========================================
-// 2. НАСТРОЙКА ВОПРОСОВ И БАЛЛОВ
-// В impacts пишем, какой профессии и сколько баллов дает этот ответ
-// ==========================================
-const questions = [
-  {
-    text: "Question N.1",
-    answers: [
-      { text: "A) ...", impacts: { a1: 3, c1: 1 } },
-      { text: "B) ...", impacts: { a2: 3, b2: 1 } },
-      { text: "C) ...", impacts: { b2: 3, c1: 1 } },
-      { text: "D) ...", impacts: { b1: 3, d1: 1 } }
-    ]
-  },
-  {
-    text: "Question N.2",
-    answers: [
-      { text: "A) ...", impacts: { a1: 3, a2: 3 } },
-      { text: "B) ...", impacts: { d2: 3, b1: 1 } },
-      { text: "C) ...", impacts: { b1: 3, d1: 2 } },
-      { text: "D) ...", impacts: { d1: 3, c2: 2 } }
-    ]
-  },
-  {
-    text: "Question N.3",
-    answers: [
-      { text: "A) ...", impacts: { b1: 3, d1: 2 } },
-      { text: "B) ...", impacts: { c2: 3, d1: 1 } },
-      { text: "C) ...", impacts: { c1: 3, a1: 2 } },
-      { text: "D) ...", impacts: { a2: 2, d2: 3 } }
-    ]
-  },
-  {
-    text: "Question N.4",
-    answers: [
-      { text: "A) ...", impacts: { c1: 2, d2: 3 } },
-      { text: "B) ...", impacts: { c2: 3, a1: 1 } },
-      { text: "C) ...", impacts: { b1: 3, b2: 1 } },
-      { text: "D) ...", impacts: { a2: 3, b2: 2 } }
-    ]
-  },
-  {
-    text: "Question N.5",
-    answers: [
-      { text: "A) ...", impacts: { a1: 2, c1: 2 } },
-      { text: "B) ...", impacts: { a2: 2, d2: 2 } },
-      { text: "C) ...", impacts: { b2: 3, c2: 2 } },
-      { text: "D) ...", impacts: { d1: 3, b1: 1 } }
-    ]
-  },
-  {
-    text: "Question N.6",
-    answers: [
-      { text: "A) ...", impacts: { a1: 3, a2: 2 } },
-      { text: "B) ...", impacts: { d2: 3, c1: 1 } },
-      { text: "C) ...", impacts: { c2: 2, b2: 2 } },
-      { text: "D) ...", impacts: { b1: 3, d1: 1 } }
-    ]
-  },
-  {
-    text: "Question N.7",
-    answers: [
-      { text: "A) ...", impacts: { b2: 3, a2: 2 } },
-      { text: "B) ...", impacts: { c1: 2, c2: 2 } },
-      { text: "C) ...", impacts: { d2: 3, a1: 1 } },
-      { text: "D) ...", impacts: { d1: 3, b1: 2 } }
-    ]
-  },
-  {
-    text: "Question N.8",
-    answers: [
-      { text: "A) ...", impacts: { a1: 3, a2: 2 } },
-      { text: "B) ...", impacts: { b2: 3, c2: 1 } },
-      { text: "C) ...", impacts: { c1: 3, d2: 2 } },
-      { text: "D) ...", impacts: { d1: 3, b1: 3 } }
-    ]
-  },
-  {
-    text: "Question N.9",
-    answers: [
-      { text: "A) ...", impacts: { a2: 2, c1: 2 } },
-      { text: "B) ...", impacts: { b1: 3, d1: 2 } },
-      { text: "C) ...", impacts: { b2: 3, c2: 2 } },
-      { text: "D) ...", impacts: { d2: 3, a1: 2 } }
-    ]
-  }
-];
-//==========================================
-// 3. ЛОГИКА ТЕСТА (Тут ничего менять не нужно)
-// ==========================================
-let currentStep = 0;
-let scores = {};
+                <!-- Блок статуса и кнопки звука -->
+                <div class="flex flex-wrap items-center gap-2 ml-auto">
+                    <!-- Индикатор текущего шага -->
+                    <div class="bg-black border-4 border-pink-500 rounded-xl px-3 py-1.5 text-center shadow-[3px_3px_0_#00ffff]">
+                        <div class="text-[10px] text-pink-400 font-black uppercase leading-none">Прогресс</div>
+                        <div class="text-base sm:text-xl font-black text-yellow-300 leading-tight">
+                            <span id="answeredCountDisplay">0</span> / 10
+                        </div>
+                    </div>
 
-function startQuiz() {
-  currentStep = 0;
-  // Сбрасываем очки для всех профессий
-  scores = {};
-  for (let key in professions) {
-    scores[key] = 0;
-  }
-  
-  document.getElementById('result-block').classList.add('hidden');
-  document.getElementById('question-block').classList.remove('hidden');
-  renderQuestion();
-}
+                    <!-- Вкл/Выкл 8-битный звук -->
+                    <button id="soundToggleBtn" onclick="toggleSound()" 
+                        class="bg-yellow-300 hover:bg-yellow-200 text-black font-black text-xs sm:text-sm px-3 py-2 rounded-xl border-4 border-black shadow-[3px_3px_0_#ff00ff] active:translate-y-0.5 transition">
+                        🔊 ЗВУК: ВКЛ
+                    </button>
+                </div>
+            </div>
 
-function renderQuestion() {
-  const q = questions[currentStep];
-  document.getElementById('q-number').innerText = `Question ${currentStep + 1} of ${questions.length}`;
-  document.getElementById('q-text').innerText = q.text;
-  
-  const box = document.getElementById('answers-box');
-  box.innerHTML = ''; // Очищаем старые кнопки
-  
-  q.answers.forEach(answer => {
-    const btn = document.createElement('button');
-    btn.className = 'btn';
-    btn.innerText = answer.text;
-    btn.onclick = () => handleAnswer(answer.impacts);
-    box.appendChild(btn);
-  });
-}
+            <!-- СТРОГИЙ ИНДИКАТОР ПРОГРЕССА 1..10 (БЕЗ ВОЗМОЖНОСТИ ПРЫГАТЬ ВПЕРЕД!) -->
+            <div class="mt-3 pt-2 border-t-2 border-dashed border-yellow-400">
+                <div class="flex items-center justify-between text-[11px] sm:text-xs font-black text-lime-300 mb-1.5 px-1">
+                    <span>🔒 ПОСЛЕДОВАТЕЛЬНОЕ ПРОХОЖДЕНИЕ (ПЕРЕХОД ТОЛЬКО ПОСЛЕ ОТВЕТА):</span>
+                    <span id="stepStatusBadge" class="blink-badge px-2 py-0.5 rounded border-2 font-black">ЖДЕМ ВЫБОР ОТВЕТА!</span>
+                </div>
+                <div id="questionStepsBar" class="grid grid-cols-10 gap-1 sm:gap-1.5">
+                    <!-- Генерируется через JS (индикаторы без клика вперед) -->
+                </div>
+            </div>
+        </header>
 
-function handleAnswer(impacts) {
-  // Добавляем баллы за выбранный ответ
-  for (let jobKey in impacts) {
-    if (scores[jobKey] !== undefined) {
-      scores[jobKey] += impacts[jobKey];
-    }
-  }
-  
-  currentStep++;
-  if (currentStep < questions.length) {
-    renderQuestion();
-  } else {
-    showResult();
-  }
-}
+        <!-- ЭКРАН ВЫБОРА ОТВЕТА (АКТИВНЫЙ ВОПРОС) -->
+        <section id="quizScreen" class="w-full ugly-container rounded-3xl p-4 sm:p-6 flex flex-col justify-between">
+            
+            <!-- Шапка номера вопроса (БЕЗ ТЕКСТА САМОГО ВОПРОСА) -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 bg-gradient-to-r from-purple-900 via-pink-700 to-indigo-900 p-3 sm:p-4 rounded-2xl border-4 border-yellow-300 shadow-[0_0_15px_#ffff00]">
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <span class="blink-badge text-xs sm:text-sm font-black px-2.5 py-1 rounded-lg border-2 uppercase">
+                        🔥 СМОТРИ ВОПРОС НА ЭКРАНЕ 🔥
+                    </span>
+                    <h2 id="questionTitle" class="text-xl sm:text-3xl md:text-4xl font-black text-white drop-shadow-[2px_2px_0_#000]">
+                        ВОПРОС №1 ИЗ 10
+                    </h2>
+                </div>
+                <div class="text-xs sm:text-sm font-black text-yellow-300 bg-black/80 px-3 py-1.5 rounded-xl border-2 border-cyan-400 text-center">
+                    👀 Выбери 1 из 4 вариантов ниже
+                </div>
+            </div>
 
-function showResult() {
-  document.getElementById('question-block').classList.add('hidden');
-  document.getElementById('result-block').classList.remove('hidden');
-  
-  // Ищем профессию с максимальным количеством очков
-  let maxScore = -1;
-  let winnerKey = 'd2'; // По умолчанию
-  
-  for (let key in scores) {
-    if (scores[key] > maxScore) {
-      maxScore = scores[key];
-      winnerKey = key;
-    }
-  }
-  
-  const winner = professions[winnerKey];
-  document.getElementById('r-title').innerText = winner.title;
-  document.getElementById('r-desc').innerText = winner.desc;
-}
+            <!-- СЕТКА ИЗ 4 КНОПОК ОТВЕТОВ (ВСЕГДА РОВНАЯ, КРУПНАЯ И УДОБНАЯ) -->
+            <div id="answersGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-5 my-1">
+                
+                <!-- Вариант A -->
+                <button onclick="selectAnswer(0, event)" id="ansBtn0"
+                    class="ugly-answer-btn btn-style-0 rounded-2xl p-4 sm:p-6 min-h-[96px] sm:min-h-[130px] flex items-center gap-3 sm:gap-4 text-left w-full group">
+                    <span class="letter-badge w-11 h-11 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center text-lg sm:text-2xl font-black shrink-0">
+                        A
+                    </span>
+                    <span id="ansText0" class="text-lg sm:text-2xl md:text-2xl font-black text-white leading-snug break-words flex-1">
+                        The entire clock tower
+                    </span>
+                    <span id="ansStatus0" class="text-2xl sm:text-3xl shrink-0"></span>
+                </button>
 
-// Запускаем тест при загрузке страницы
-startQuiz();
-</script>
+                <!-- Вариант B -->
+                <button onclick="selectAnswer(1, event)" id="ansBtn1"
+                    class="ugly-answer-btn btn-style-1 rounded-2xl p-4 sm:p-6 min-h-[96px] sm:min-h-[130px] flex items-center gap-3 sm:gap-4 text-left w-full group">
+                    <span class="letter-badge w-11 h-11 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center text-lg sm:text-2xl font-black shrink-0">
+                        B
+                    </span>
+                    <span id="ansText1" class="text-lg sm:text-2xl md:text-2xl font-black text-white leading-snug break-words flex-1">
+                        The giant bell inside the tower
+                    </span>
+                    <span id="ansStatus1" class="text-2xl sm:text-3xl shrink-0"></span>
+                </button>
 
+                <!-- Вариант C -->
+                <button onclick="selectAnswer(2, event)" id="ansBtn2"
+                    class="ugly-answer-btn btn-style-2 rounded-2xl p-4 sm:p-6 min-h-[96px] sm:min-h-[130px] flex items-center gap-3 sm:gap-4 text-left w-full group">
+                    <span class="letter-badge w-11 h-11 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center text-lg sm:text-2xl font-black shrink-0">
+                        C
+                    </span>
+                    <span id="ansText2" class="text-lg sm:text-2xl md:text-2xl font-black text-white leading-snug break-words flex-1">
+                        Vladimir Putin’s secret underground bunker
+                    </span>
+                    <span id="ansStatus2" class="text-2xl sm:text-3xl shrink-0"></span>
+                </button>
+
+                <!-- Вариант D -->
+                <button onclick="selectAnswer(3, event)" id="ansBtn3"
+                    class="ugly-answer-btn btn-style-3 rounded-2xl p-4 sm:p-6 min-h-[96px] sm:min-h-[130px] flex items-center gap-3 sm:gap-4 text-left w-full group">
+                    <span class="letter-badge w-11 h-11 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center text-lg sm:text-2xl font-black shrink-0">
+                        D
+                    </span>
+                    <span id="ansText3" class="text-lg sm:text-2xl md:text-2xl font-black text-white leading-snug break-words flex-1">
+                        Kirill Leonidovich Bun’s morning alarm clock
+                    </span>
+        <span id="ansStatus3" class="text-2xl sm:text-3xl shrink-0"></span>
+                </button>
+
+            </div>
+
+            <!-- НИЖНЯЯ ПАНЕЛЬ ПОДТВЕРЖДЕНИЯ И ПЕРЕХОДА К СЛЕДУЮЩЕМУ ВОПРОСУ -->
+            <div class="mt-4 pt-3 border-t-4 border-dotted border-pink-500 flex flex-col sm:flex-row items-center justify-between gap-3">
+                
+                <!-- Статус выбранного ответа -->
+                <div id="feedbackBanner" class="text-center sm:text-left font-black text-sm sm:text-lg px-4 py-3 rounded-xl border-2 border-yellow-300 bg-black/90 text-yellow-300 flex-1 w-full">
+                    ⏳ СНАЧАЛА ВЫБЕРИ ВАРИАНТ A, B, C ИЛИ D ВЫШЕ!
+                </div>
+
+                <!-- Кнопка подтверждения и перехода к следующему вопросу (активна ТОЛЬКО после выбора ответа!) -->
+                <button id="nextBtn" onclick="confirmAndNextQuestion(event)" disabled
+                    class="w-full sm:w-auto next-action-btn-disabled font-black text-base sm:text-xl px-6 py-3.5 rounded-2xl uppercase tracking-wide transition">
+                    🔒 ВЫБЕРИ ОТВЕТ, ЧТОБЫ ИДТИ ДАЛЬШЕ
+                </button>
+            </div>
+        </section>
+
+        <!-- ЭКРАН ФИНАЛЬНЫХ РЕЗУЛЬТАТОВ (ПОКАЗЫВАЕТСЯ ТОЛЬКО ПОСЛЕ ОТВЕТА НА ВСЕ 10 ВОПРОСОВ) -->
+        <section id="resultsScreen" class="hidden w-full ugly-container rounded-3xl p-5 sm:p-7 text-center">
+            <div class="text-5xl sm:text-7xl mb-2 animate-bounce">🏆🤪🎉</div>
+            <h2 class="wordart-title text-2xl sm:text-5xl uppercase mb-2">
+                ФИНАЛ ВИКТОРИНЫ!
+            </h2>
+            <p class="text-cyan-300 font-black text-sm sm:text-lg mb-4">
+                ВСЕ 10 ОТВЕТОВ ЗАФИКСИРОВАНЫ! ВОТ СКОЛЬКО ТЫ ВЫБИЛ:
+            </p>
+
+            <!-- Гигантский счетчик правильных ответов -->
+            <div class="inline-block bg-black border-8 border-yellow-400 rounded-3xl px-8 py-5 mb-5 shadow-[0_0_40px_#00ff00]">
+                <div class="text-xs sm:text-sm text-pink-400 font-black uppercase tracking-widest mb-1">
+                    КОЛИЧЕСТВО ВЕРНЫХ ОТВЕТОВ:
+                </div>
+                <div id="finalScoreBig" class="text-5xl sm:text-7xl font-black text-lime-400 drop-shadow-[4px_4px_0_#ff00ff]">
+                    0 / 10
+                </div>
+                <div id="finalRankText" class="mt-2 text-sm sm:text-xl font-black text-yellow-300">
+                    МЕГА-МОЗГ ГАЛАКТИКИ!
+                </div>
+            </div>
+
+            <!-- Детальная таблица ответов по всем 10 вопросам (только варианты, без вопросов) -->
+            <div class="bg-black/85 border-4 border-cyan-400 rounded-2xl p-3 sm:p-4 mb-6 text-left max-h-80 overflow-y-auto">
+                <div class="text-xs sm:text-sm font-black text-yellow-300 uppercase mb-2.5 text-center">
+                    📋 РАЗБОР ТВОИХ ОТВЕТОВ И ПРАВИЛЬНЫЕ ВАРИАНТЫ:
+                </div>
+                <div id="resultsBreakdownList" class="space-y-2 text-xs sm:text-base">
+                    <!-- Заполняется скриптом -->
+                </div>
+            </div>
+
+            <!-- Кнопка перезапуска с 1-го вопроса -->
+            <div class="flex justify-center">
+                <button onclick="resetQuiz()" 
+                    class="bg-lime-400 hover:bg-lime-300 text-black font-black text-lg sm:text-2xl px-8 py-4 rounded-2xl border-4 border-white shadow-[0_0_25px_#00ff00] active:translate-y-1 transition uppercase">
+                    🔄 НАЧАТЬ ЗАНОВО С 1-ГО ВОПРОСА
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- НИЖНЯЯ БЕГУЩАЯ СТРОКА -->
+    <div class="marquee-strip">
+        <div class="marquee-inner text-xs sm:text-sm" style="animation-direction: reverse;">
+            🐸 ПОДСКАЗКА: МОЖНО НАЖИМАТЬ КЛАВИШИ 1, 2, 3, 4 ИЛИ A, B, C, D НА КЛАВИАТУРЕ, А ЗАТЕМ ENTER! 🐸 ПЕРЕХОД К СЛЕДУЮЩЕМУ ВОПРОСУ ОТКРЫВАЕТСЯ ТОЛЬКО ПОСЛЕ ОТВЕТА НА ТЕКУЩИЙ! 🐸 ПРАВИЛЬНЫЕ ОТВЕТЫ В КОНЦЕ! 🐸
+        </div>
+    </div>
+
+    <script>
+        /* ============================================================================
+         * 🔥 ЖЕСТКО ЗАШИТЫЕ ВАРИАНТЫ ОТВЕТОВ И ПРАВИЛЬНЫЕ КЛЮЧИ (БЕЗ ВОПРОСОВ) 🔥
+         * ----------------------------------------------------------------------------
+         * Ключ ответов: 1.B | 2.A | 3.B | 4.A | 5.B | 6.B | 7.A | 8.A | 9.B | 10.B
+         * Индексы: 0 = A, 1 = B, 2 = C, 3 = D
+         * ============================================================================ */
+        const QUESTIONS = [
+            {
+                // #1 (Correct: B)
+                options: [
+                    "The entire clock tower",
+                    "The giant bell inside the tower",
+                    "Vladimir Putin’s secret underground bunker",
+                    "Kirill Leonidovich Bun’s morning alarm clock"
+                ],
+                correct: 1
+            },
+            {
+                // #2 (Correct: A)
+                options: [
+                    "The Haka",
+                    "P. Diddy’s White Party shuffle",
+                    "The Macarena",
+                    "Morris dance"
+                ],
+                correct: 0
+            },
+            {
+                // #3 (Correct: B)
+                options: [
+                    "221B Baker Street",
+                    "10 Downing Street",
+                    "69 P. Diddy Boulevard",
+                    "1 Kremlin Wall"
+                ],
+                correct: 1
+            },
+            {
+                // #4 (Correct: A)
+                options: [
+                    "The failure of the Gunpowder Plot of 1605",
+                    "The signing of the Magna Carta",
+                    "Vladimir Putin’s judo championship victory",
+                    "P. Diddy’s first album release"
+                ],
+                correct: 0
+            },
+            {
+                // #5 (Correct: B)
+                options: [
+                    "Koala and platypus",
+                    "Kangaroo and emu",
+                    "A bear riding a unicycle for Vladimir Putin",
+                    "Wombat and Tasmanian devil"
+                ],
+                correct: 1
+            },
+            {
+                // #6 (Correct: B)
+                options: [
+                    "Harry Potter",
+                    "The Lord of the Rings",
+                    "P. Diddy’s documentary trilogy",
+                    "Star Wars"
+                ],
+                correct: 1
+            },
+            {
+                // #7 (Correct: A)
+                options: [
+                    "It has three capital cities",
+                    "It has no capital city at all",
+                    "Kirill Leonidovich Bun is its honorary mayor",
+                    "It changes its capital every weekend"
+                ],
+                correct: 0
+            },
+            {
+                // #8 (Correct: A)
+                options: [
+                    "Nessie",
+                    "Bigfoot",
+                    "Vladimir Putin in a submarine",
+                    "Diddy Kong"
+                ],
+                correct: 0
+            },
+            {
+                // #9 (Correct: B)
+                options: [
+                    "Three",
+                    "Four",
+                    "Five (including Kirill Leonidovich Bun on the far right)",
+                    "Six"
+                ],
+                correct: 1
+            },
+            {
+                // #10 (Correct: B)
+                options: [
+                    "The Bahamas",
+                    "Jamaica",
+                    "Kirill Leonidovich Bun’s private resort",
+                    "Barbados"
+                ],
+                correct: 1
+            }
+        ];
+
+        // Текущее состояние прохождения (строго от 0 до 9 по порядку)
+        let currentIdx = 0;
+        let selectedForCurrent = null; // Выбранный вариант на текущем вопросе до нажатия «Дальше»
+        let userAnswers = new Array(10).fill(null); // Зафиксированные ответы
+        let soundEnabled = true;
+
+        // Аудио-контекст для 8-битных всратых звуков (без внешних файлов)
+        let audioCtx = null;
+
+        function ensureAudio() {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    audioCtx = new AudioContextClass();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function playSound(type) {
+            if (!soundEnabled) return;
+            try {
+                ensureAudio();
+                if (!audioCtx) return;
+
+                const now = audioCtx.currentTime;
+
+                if (type === 'select') {
+                    // Бодрый 8-битный бульк при выборе A/B/C/D
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'square';
+                    osc.frequency.setValueAtTime(360, now);
+                    osc.frequency.exponentialRampToValueAtTime(720, now + 0.11);
+                    gain.gain.setValueAtTime(0.14, now);
+                    gain.gain.linearRampToValueAtTime(0.01, now + 0.12);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.12);
+                } else if (type === 'next') {
+                    // Звук фиксации ответа и перехода к следующему вопросу
+                    const notes = [440, 587.33, 880];
+                    notes.forEach((freq, idx) => {
+                        const osc = audioCtx.createOscillator();
+                        const gain = audioCtx.createGain();
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(freq, now + idx * 0.06);
+                        gain.gain.setValueAtTime(0.16, now + idx * 0.06);
+                        gain.gain.linearRampToValueAtTime(0.01, now + idx * 0.06 + 0.11);
+                        osc.connect(gain);
+                        gain.connect(audioCtx.destination);
+                        osc.start(now + idx * 0.06);
+                        osc.stop(now + idx * 0.06 + 0.11);
+                    });
+                } else if (type === 'fanfare') {
+                    // Финальная фанфара после 10-го вопроса
+                    const notes = [523.25, 659.25, 783.99, 1046.5, 783.99, 1046.5];
+                    notes.forEach((freq, idx) => {
+                        const osc = audioCtx.createOscillator();
+                        const gain = audioCtx.createGain();
+                        osc.type = 'square';
+                        osc.frequency.setValueAtTime(freq, now + idx * 0.09);
+                        gain.gain.setValueAtTime(0.15, now + idx * 0.09);
+                        gain.gain.linearRampToValueAtTime(0.01, now + idx * 0.09 + 0.14);
+                        osc.connect(gain);
+                        gain.connect(audioCtx.destination);
+                        osc.start(now + idx * 0.09);
+                        osc.stop(now + idx * 0.09 + 0.14);
+                    });
+                }
+            } catch (e) {
+                // Игнорируем ошибки автовоспроизведения
+            }
+        }
+
+        // Салют из всратых эмодзи при клике
+        function spawnParticles(x, y) {
+            const emojis = ['💥', '🤪', '🔥', '🐸', '✨', '🌈', '🍕', '👑', '💯', '⚡'];
+            for (let i = 0; i < 12; i++) {
+                const el = document.createElement('div');
+                el.className = 'click-particle';
+                el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                const angle = (Math.PI * 2 * i) / 12 + (Math.random() * 0.4 - 0.2);
+                const dist = 60 + Math.random() * 90;
+                const tx = Math.cos(angle) * dist;
+                const ty = Math.sin(angle) * dist;
+                const rot = (Math.random() * 360 - 180) + 'deg';
+
+                el.style.left = (x - 14) + 'px';
+                el.style.top = (y - 14) + 'px';
+                el.style.setProperty('--tx', tx + 'px');
+                el.style.setProperty('--ty', ty + 'px');
+                el.style.setProperty('--rot', rot);
+
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 880);
+            }
+        }
+
+        // Подсчет правильных ответов (вызывается только в самом конце)
+        function calculateFinalScore() {
+            let correctCount = 0;
+            for (let i = 0; i < 10; i++) {
+                if (userAnswers[i] !== null && userAnswers[i] === QUESTIONS[i].correct) {
+                    correctCount++;
+                }
+            }
+            return correctCount;
+        }
+
+        // Отрисовка верхней полосы шагов 1..10 (строго информационная, без кликов вперед!)
+        function renderQuestionStepsBar() {
+            const bar = document.getElementById('questionStepsBar');
+            bar.innerHTML = '';
+
+            for (let i = 0; i < 10; i++) {
+                const badge = document.createElement('div');
+                const isCurrent = i === currentIdx;
+                const isCompleted = i < currentIdx;
+
+                let colorClass = 'bg-gray-900 text-gray-500 border-gray-700';
+                let labelText = `🔒${i + 1}`;
+
+                if (isCompleted) {
+                    // Уже отвеченный вопрос (без спойлера правильности!)
+                    colorClass = 'bg-cyan-500 text-black border-white';
+                    labelText = `✔${i + 1}`;
+                } else if (isCurrent) {
+                    // Текущий активный вопрос
+                    colorClass = 'bg-yellow-300 text-black border-pink-500 scale-105 shadow-[0_0_12px_#ffff00]';
+                    labelText = `👉${i + 1}`;
+                }
+
+                badge.className = `py-1.5 sm:py-2 rounded-xl font-black text-[11px] sm:text-sm border-2 text-center select-none transition ${colorClass}`;
+                badge.textContent = labelText;
+                bar.appendChild(badge);
+            }
+
+            // Сколько уже зафиксировано ответов
+            document.getElementById('answeredCountDisplay').textContent = currentIdx;
+        }
+              // Отрисовка текущего вопроса (только номер и 4 варианта ответа)
+        function renderCurrentQuestion() {
+            const q = QUESTIONS[currentIdx];
+            const letters = ['A', 'B', 'C', 'D'];
+
+            document.getElementById('questionTitle').textContent = `ВОПРОС №${currentIdx + 1} ИЗ 10`;
+
+            // Верхний бейдж статуса
+            const stepStatusBadge = document.getElementById('stepStatusBadge');
+            if (selectedForCurrent === null) {
+                stepStatusBadge.textContent = `ВОПРОС #${currentIdx + 1}: ВЫБЕРИ ОТВЕТ!`;
+            } else {
+                stepStatusBadge.textContent = `ВЫБРАН ВАРИАНТ «${letters[selectedForCurrent]}» — ЖМИ ДАЛЬШЕ!`;
+            }
+
+            // Обновляем 4 кнопки ответов
+            for (let idx = 0; idx < 4; idx++) {
+                const btn = document.getElementById(`ansBtn${idx}`);
+                const txt = document.getElementById(`ansText${idx}`);
+                const status = document.getElementById(`ansStatus${idx}`);
+
+                txt.textContent = q.options[idx];
+                status.textContent = '';
+
+                btn.classList.remove('btn-selected-locked', 'btn-dimmed');
+
+                if (selectedForCurrent !== null) {
+                    if (idx === selectedForCurrent) {
+                        btn.classList.add('btn-selected-locked');
+                        status.textContent = '👈';
+                    } else {
+                        btn.classList.add('btn-dimmed');
+                    }
+                }
+            }
+
+            // Обновляем нижний баннер и кнопку «ДАЛЬШЕ»
+            const feedbackBanner = document.getElementById('feedbackBanner');
+            const nextBtn = document.getElementById('nextBtn');
+            const isLastQuestion = currentIdx === 9;
+
+            if (selectedForCurrent === null) {
+                feedbackBanner.className = 'text-center sm:text-left font-black text-sm sm:text-lg px-4 py-3 rounded-xl border-2 border-yellow-300 bg-black/90 text-yellow-300 flex-1 w-full';
+                feedbackBanner.textContent = '⏳ СНАЧАЛА НАЖМИ НА ОДНУ ИЗ 4 КНОПОК (A, B, C ИЛИ D)!';
+
+                nextBtn.disabled = true;
+                nextBtn.className = 'w-full sm:w-auto next-action-btn-disabled font-black text-base sm:text-xl px-6 py-3.5 rounded-2xl uppercase tracking-wide transition';
+                nextBtn.textContent = isLastQuestion
+                    ? '🔒 ВЫБЕРИ ОТВЕТ ДЛЯ ФИНАЛА'
+                    : `🔒 СНАЧАЛА ОТВЕТЬ НА ВОПРОС №${currentIdx + 1}`;
+            } else {
+                feedbackBanner.className = 'text-center sm:text-left font-black text-sm sm:text-lg px-4 py-3 rounded-xl border-4 border-white bg-cyan-400 text-black flex-1 w-full';
+                feedbackBanner.textContent = `✅ ВЫБРАН ВАРИАНТ «${letters[selectedForCurrent]}»! ТЕПЕРЬ ЖМИ КНОПКУ СПРАВА 👉`;
+
+                nextBtn.disabled = false;
+                nextBtn.className = 'w-full sm:w-auto next-action-btn-active font-black text-base sm:text-xl px-6 py-3.5 rounded-2xl uppercase tracking-wide transition';
+                nextBtn.textContent = isLastQuestion
+                    ? '🏆 ЗАВЕРШИТЬ И УЗНАТЬ ОТВЕТЫ! 🏆'
+                    : `ПОДТВЕРДИТЬ И К ВОПРОСУ №${currentIdx + 2} ➡️`;
+            }
+
+            renderQuestionStepsBar();
+        }
+
+        // Выбор одного из 4 вариантов ответа (A, B, C, D) на текущем вопросе
+        function selectAnswer(optionIdx, event) {
+            selectedForCurrent = optionIdx;
+
+            if (event && event.clientX) {
+                spawnParticles(event.clientX, event.clientY);
+            } else {
+                spawnParticles(window.innerWidth / 2, window.innerHeight / 2);
+            }
+
+            playSound('select');
+            renderCurrentQuestion();
+        }
+
+        // Подтверждение ответа и строгий переход к следующему вопросу (или к финалу после 10-го)
+        function confirmAndNextQuestion(event) {
+            // Защита: нельзя перейти дальше, пока не выбран ответ на текущий вопрос!
+            if (selectedForCurrent === null) return;
+
+            if (event && event.clientX) {
+                spawnParticles(event.clientX, event.clientY);
+            }
+
+            // Сохраняем выбранный ответ для текущего вопроса
+            userAnswers[currentIdx] = selectedForCurrent;
+
+            if (currentIdx < 9) {
+                // Переходим строго к следующему вопросу
+                playSound('next');
+                currentIdx++;
+                selectedForCurrent = null;
+                renderCurrentQuestion();
+            } else {
+                // Это был 10-й вопрос — показываем финальный экран с правильными ответами и счетом!
+                document.getElementById('answeredCountDisplay').textContent = '10';
+                showResultsScreen();
+            }
+        }
+
+        // Показ финального экрана результатов с правильными ответами (только после всех 10 вопросов)
+        function showResultsScreen() {
+            playSound('fanfare');
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultsScreen').classList.remove('hidden');
+
+            // Обновляем верхнюю шкалу: все 10 пройдены
+            const bar = document.getElementById('questionStepsBar');
+            bar.innerHTML = '';
+            for (let i = 0; i < 10; i++) {
+                const isCorrect = userAnswers[i] === QUESTIONS[i].correct;
+                const badge = document.createElement('div');
+                badge.className = `py-1.5 sm:py-2 rounded-xl font-black text-[11px] sm:text-sm border-2 text-center select-none ${
+                    isCorrect
+                        ? 'bg-lime-400 text-black border-white'
+                        : 'bg-red-600 text-white border-yellow-300'
+                }`;
+                badge.textContent = `${isCorrect ? '✅' : '❌'}${i + 1}`;
+                bar.appendChild(badge);
+            }
+            document.getElementById('stepStatusBadge').textContent = '🎉 ВСЕ 10 ВОПРОСОВ ПРОЙДЕНЫ! 🎉';
+
+            const score = calculateFinalScore();
+            document.getElementById('finalScoreBig').textContent = `${score} / 10`;
+
+            let rank = '';
+            if (score === 10) rank = '👑 АБСОЛЮТНЫЙ БОГ ВИКТОРИНЫ (10 ИЗ 10)!! 👑';
+            else if (score >= 8) rank = '🔥 МОЩНЕЙШИЙ МЕГАМОЗГ! ПОЧТИ ИДЕАЛЬНО! 🔥';
+            else if (score >= 5) rank = '😎 НОРМАЛЬНЫЙ КАБАНЧИК! СЕРЕДИНКА НА ПОЛОВИНКУ!';
+            else if (score >= 2) rank = '🐸 НУ ТЫ ПЫТАЛСЯ, БРАТИШКА... ЗАТО КНОПКИ КРАСИВЫЕ!';
+            else rank = '🤡 ЛЕГЕНДАРНЫЙ ПРОМАХ! УГАДАТЬ 0-1 — ЭТО ТОЖЕ ТАЛАНТ!';
+
+            document.getElementById('finalRankText').textContent = rank;
+
+            // Детальный разбор всех 10 вопросов (ТОЛЬКО варианты ответов, без текста вопросов!)
+            const list = document.getElementById('resultsBreakdownList');
+            list.innerHTML = '';
+            const letters = ['A', 'B', 'C', 'D'];
+
+            for (let i = 0; i < 10; i++) {
+                const q = QUESTIONS[i];
+                const chosen = userAnswers[i];
+                const isCorrect = chosen === q.correct;
+
+                const row = document.createElement('div');
+                row.className = `p-3 rounded-xl border-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 ${
+                    isCorrect ? 'bg-green-950/90 border-lime-400 text-lime-200' : 'bg-red-950/90 border-red-500 text-red-200'
+                }`;
+
+                const chosenText = chosen !== null ? `${letters[chosen]}) ${q.options[chosen]}` : 'Не выбран';
+                const correctText = `${letters[q.correct]}) ${q.options[q.correct]}`;
+
+                row.innerHTML = `
+                    <div class="font-bold">
+                        <span class="inline-block px-2 py-0.5 mr-1 rounded bg-black text-yellow-300 font-black">#${i + 1}</span>
+                        ${isCorrect ? '✅ ВЕРНО!' : '❌ МИМО!'}
+                        <span class="ml-1">Твой выбор: <strong class="underline text-white">${escapeHtml(chosenText)}</strong></span>
+                    </div>
+                    <div class="text-xs sm:text-sm font-black px-2.5 py-1 rounded-lg bg-black/80 text-yellow-300 border border-yellow-400 shrink-0">
+                        ✔ Правильный: ${escapeHtml(correctText)}
+                    </div>
+                `;
+                list.appendChild(row);
+            }
+
+            // Салют на экране результатов
+            spawnParticles(window.innerWidth * 0.3, window.innerHeight * 0.35);
+            setTimeout(() => spawnParticles(window.innerWidth * 0.7, window.innerHeight * 0.35), 220);
+        }
+
+        // Полный сброс и старт заново с 1-го вопроса
+        function resetQuiz() {
+            playSound('select');
+            userAnswers = new Array(10).fill(null);
+            currentIdx = 0;
+            selectedForCurrent = null;
+            document.getElementById('resultsScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+            renderCurrentQuestion();
+        }
+
+        // Переключение звука
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            const btn = document.getElementById('soundToggleBtn');
+            if (soundEnabled) {
+                btn.textContent = '🔊 ЗВУК: ВКЛ';
+                btn.className = 'bg-yellow-300 hover:bg-yellow-200 text-black font-black text-xs sm:text-sm px-3 py-2 rounded-xl border-4 border-black shadow-[3px_3px_0_#ff00ff] active:translate-y-0.5 transition';
+                playSound('select');
+            } else {
+                btn.textContent = '🔇 ЗВУК: ВЫКЛ';
+                btn.className = 'bg-gray-700 hover:bg-gray-600 text-white font-black text-xs sm:text-sm px-3 py-2 rounded-xl border-4 border-black shadow-[3px_3px_0_#00ffff] active:translate-y-0.5 transition';
+            }
+        }
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;");
+        }
+
+        // Поддержка клавиатуры: 1-4 или A-D для выбора варианта, Enter/Space для подтверждения и перехода к следующему
+        window.addEventListener('keydown', (e) => {
+            const quizVisible = !document.getElementById('quizScreen').classList.contains('hidden');
+            if (!quizVisible) return;
+
+            const keyUpper = e.key.toUpperCase();
+            if (['1', '2', '3', '4'].includes(e.key)) {
+                selectAnswer(parseInt(e.key, 10) - 1, null);
+            } else if (['A', 'B', 'C', 'D'].includes(keyUpper)) {
+                selectAnswer(keyUpper.charCodeAt(0) - 65, null);
+            } else if ((e.key === 'Enter' || e.key === ' ') && selectedForCurrent !== null) {
+                e.preventDefault();
+                confirmAndNextQuestion(null);
+            }
+        });
+
+        // Инициализация при загрузке
+        window.onload = function() {
+            renderCurrentQuestion();
+        };
+    </script>
 </body>
 </html>
